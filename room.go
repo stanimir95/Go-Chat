@@ -35,6 +35,7 @@ const (
 	messageBufferSize = 256
 )
 
+// https://godoc.org/github.com/gorilla/websocket
 var upgrader = &websocket.Upgrader{ReadBufferSize: socketBufferSize, WriteBufferSize: socketBufferSize}
 
 func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
