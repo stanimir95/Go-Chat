@@ -25,7 +25,7 @@
 							msgBox.val("");
 							return false;
 						});
-						if (!window("WebSocket")) {
+						if (!window["WebSocket"]) {
 							alert("Error: Your browser is bad.")
 						} else {
 							socket = new WebSocket("ws://localhost:8080/room");
